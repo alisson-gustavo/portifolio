@@ -1,79 +1,24 @@
-// ─── NAVBAR scroll ───
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
-});
+const navbar=document.getElementById('navbar');
+addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>40));
 
-// ─── MOBILE MENU ───
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
-mobileMenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
+const menu=document.getElementById('mobileMenu');
+document.getElementById('hamburger').onclick=()=>menu.classList.toggle('open');
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
 
-// ─── TERMINAL ANIMATION ───
-const lines = [
-  '$ python manage.py runserver',
-  '> Starting development server...',
-  '$ git commit -m "feat: API endpoint"',
-  '> [main 4a2f91c] feat: API endpoint',
-  '$ docker compose up --build',
-  '> Building backend image...',
-  '$ pytest --cov=api tests/',
-  '> 42 passed in 0.87s ✓',
-];
+// Terminal
+const lines=['$ flutter run --flavor prod','> Launching lib/main_prod.dart...','$ npm run start:dev','> Nest application successfully started','$ odoo-bin -u contratos_saude','> Module updated ✓','$ docker compose up --build','> Services ready ✓'];
+const out=document.getElementById('terminalOutput');let l=0,c=0;
+(function type(){
+  const s=lines[l];
+  if(c<s.length){out.textContent=s.slice(0,++c);setTimeout(type,38)}
+  else setTimeout(()=>{c=0;l=(l+1)%lines.length;out.textContent='';type()},1800);
+})();
 
-const output = document.getElementById('terminalOutput');
-const cursor = document.getElementById('cursor');
-let lineIdx = 0;
-let charIdx = 0;
-let typing = true;
-let waiting = false;
+// Fade-in
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card,.tl,.title,.note,.stats div').forEach(el=>{el.classList.add('fade-in');io.observe(el)});
 
-function typeNext() {
-  if (waiting) return;
-
-  const line = lines[lineIdx];
-
-  if (typing) {
-    if (charIdx < line.length) {
-      output.textContent = line.slice(0, charIdx + 1);
-      charIdx++;
-      setTimeout(typeNext, 38);
-    } else {
-      typing = false;
-      waiting = true;
-      setTimeout(() => {
-        waiting = false;
-        typing = true;
-        charIdx = 0;
-        lineIdx = (lineIdx + 1) % lines.length;
-        output.textContent = '';
-        typeNext();
-      }, 1800);
-    }
-  }
-}
-
-// Start terminal after short delay
-setTimeout(typeNext, 800);
-
-// ─── FADE-IN on scroll ───
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll(
-  '.project-card, .stack-group, .timeline-item, .contato-card, .formacao-item, .section-title, .sobre-text'
-).forEach(el => {
-  el.classList.add('fade-in');
-  observer.observe(el);
-});
+// Link ativo no menu
+const links=[...document.querySelectorAll('.nav-links a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>so.observe(s));

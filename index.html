@@ -1,460 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alisson Gustavo · Engenheiro de Software Backend</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="/assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alisson Gustavo · Desenvolvedor Full Stack</title>
+<meta name="description" content="Desenvolvedor Full Stack: Flutter, NestJS e Odoo. Sistemas de gestão de planos de saúde.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<nav id="navbar"><div class="nav-inner">
+  <a href="#home" class="logo">AG<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li><li><a href="#stack">Stack</a></li><li><a href="#experiencia">Experiência</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#contato">Contato</a></li>
+  </ul>
+  <a class="btn-ghost small" href="assets/pdf/Curriculo_Alisson_Gustavo_Backend.pdf" target="_blank">Currículo</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><i></i><i></i><i></i></button>
+</div>
+<div class="mobile-menu" id="mobileMenu"><a href="#sobre">Sobre</a><a href="#stack">Stack</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></div>
+</nav>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <span class="nav-logo">AG<span class="dot">.</span></span>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <a class="nav-cta" href="assets/pdf/Curriculo_Alisson_Gustavo_Backend.pdf" target="_blank">Currículo</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#sobre">Sobre</a>
-      <a href="#stack">Stack</a>
-      <a href="#experiencia">Experiência</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
-    </div>
-  </nav>
+<header class="hero" id="home"><div class="hero-bg"></div>
+<div class="container hero-content">
+  <p class="eyebrow"><span class="dot"></span> Dev Júnior na Greenwave Tecnologia · Aberto a conversas</p>
+  <h1>Olá, eu sou o <span class="grad">Alisson</span>.<br>Desenvolvedor Full Stack.</h1>
+  <!-- <p class="lead">Mobile com <b>Flutter</b>, APIs com <b>NestJS</b> e ERP com <b>Odoo</b>. Construo sistemas de gestão de planos de saúde, do app do beneficiário ao financeiro.</p> -->
+  <div class="terminal"><div class="terminal-bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>alisson@dev:~</span></div>
+    <div class="terminal-body"><span id="terminalOutput"></span><span class="cursor">▮</span></div></div>
+  <div class="actions"><a href="#projetos" class="btn-primary">Ver projetos</a><a href="#contato" class="btn-ghost">Entrar em contato</a></div>
+  <div class="stats">
+    <div><b>3+</b><span>anos de experiência</span></div>
+    <div><b>3</b><span>stacks: Flutter, NestJS, Odoo</span></div>
+    <div><b>6+</b><span>sistemas em produção</span></div>
+  </div>
+</div></header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow"><span class="status-dot"></span> Disponível para trabalho remoto</p>
-      <h1 class="hero-title">
-        Alisson Gustavo<br>
-        <span class="hero-title-accent">Alencar Santos</span>
-      </h1>
-      <p class="hero-subtitle">Engenheiro de Software Backend — Python · Django · APIs REST</p>
+<section class="section alt" id="sobre"><div class="container">
+  <p class="eyebrow">01 — Sobre</p>
+  <h2 class="title">O que eu <span class="grad">faço</span></h2>
+  <div class="grid g2">
+    <article class="card"><h3>Apps mobile em Flutter</h3><p>App do beneficiário para Android e iOS: carteirinha digital, guias, extratos, cobranças, IR, protocolos, ouvidoria, reembolso, biometria facial e login gov.br (OAuth/Keycloak).</p></article>
+    <article class="card"><h3>Um app, vários clientes</h3><p>Flavors (dev/staging/prod) e troca de convênio em tempo de execução, falando com duas APIs diferentes na mesma sessão.</p></article>
+    <article class="card"><h3>APIs em NestJS + TypeScript</h3><p>JWT/Passport, TypeORM + PostgreSQL, filas com RabbitMQ, jobs agendados, PDFs (PDFKit/Puppeteer), S3, push com Firebase, e-mail e WhatsApp.</p></article>
+    <article class="card"><h3>ERP em Odoo 19</h3><p>Addons próprios para contratos, tabelas de mensalidade, financeiro (negociações, boletos, convênios), integração bancária, relatórios e S3, junto com addons da OCA.</p></article>
+  </div>
+  <p class="note">Formado em Redes de Computadores (Estácio) e cursando Engenharia de Software (UNICIVE). A base de infraestrutura me dá visão do sistema inteiro, do banco ao servidor. Gosto de Clean Code, SOLID e Clean Architecture.</p>
+</div></section>
 
-      <!-- Terminal animado -->
-      <div class="terminal" id="terminal">
-        <div class="terminal-bar">
-          <span class="tb tb-red"></span>
-          <span class="tb tb-yellow"></span>
-          <span class="tb tb-green"></span>
-          <span class="terminal-title">alisson@dev:~</span>
-        </div>
-        <div class="terminal-body">
-          <div class="terminal-line" id="terminalOutput"></div>
-          <span class="cursor" id="cursor">▮</span>
-        </div>
-      </div>
+<section class="section" id="stack"><div class="container">
+  <p class="eyebrow">02 — Stack</p><h2 class="title">Tecnologias do <span class="grad">dia a dia</span></h2>
+  <div class="grid g4">
+    <div class="card"><h4>Mobile</h4><div class="chips"><b>Flutter</b><b>Dart</b><b>flutter_modular</b><b>RxNotifier</b><b>Provider</b><b>Dio</b><b>Firebase Messaging</b><b>flutter_appauth</b><b>flutter_map</b></div></div>
+    <div class="card"><h4>Back-end</h4><div class="chips"><b>NestJS</b><b>TypeScript</b><b>Node.js</b><b>TypeORM</b><b>Passport/JWT</b><b>Swagger</b><b>RabbitMQ</b><b>PDFKit</b><b>Puppeteer</b><b>Jest</b></div></div>
+    <div class="card"><h4>ERP & Dados</h4><div class="chips"><b>Odoo 19</b><b>Python 3.12</b><b>OCA</b><b>QWeb</b><b>XML views</b><b>PostgreSQL</b><b>MySQL</b><b>Django / DRF</b></div></div>
+    <div class="card"><h4>Infra & Ferramentas</h4><div class="chips"><b>Docker Compose</b><b>Kubernetes</b><b>AWS S3</b><b>Linux / VPS</b><b>Git flow</b><b>Bitbucket</b><b>Jira</b></div></div>
+  </div>
+</div></section>
 
-      <div class="hero-actions">
-        <a href="#projetos" class="btn-primary">Ver projetos</a>
-        <a href="#contato" class="btn-ghost">Entrar em contato</a>
-      </div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">3+</span>
-        <span class="stat-label">Anos de<br>experiência</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">6+</span>
-        <span class="stat-label">Sistemas em<br>produção</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">1</span>
-        <span class="stat-label">Órgão público<br>atendido</span>
-      </div>
-    </div>
-  </section>
+<section class="section alt" id="experiencia"><div class="container">
+  <p class="eyebrow">03 — Experiência</p><h2 class="title">Trajetória <span class="grad">profissional</span></h2>
+  <div class="timeline">
+    <div class="tl"><div class="meta"><span>Atual</span><em>Atual</em></div><div>
+      <h3>Desenvolvedor Júnior</h3><p class="co">Greenwave Tecnologia</p>
+      <ul><li>Desenvolvimento de apps Flutter para beneficiários de planos de saúde (Android e iOS)</li><li>APIs REST em NestJS com PostgreSQL, RabbitMQ, jobs agendados e geração de PDFs</li><li>Addons Odoo 19 para contratos, financeiro e integração bancária</li><li>Docker, Kubernetes e fluxo Git (dev → staging → master)</li></ul></div></div>
+    <div class="tl"><div class="meta"><span>Abr/2024 — 2025</span></div><div>
+      <h3>Desenvolvedor Full Stack</h3><p class="co">Faculdade Malta · Teresina, PI</p>
+      <ul><li>APIs RESTful com Django e DRF para integrar sistemas internos</li><li>Modelagem de banco relacional (MySQL, SQLite) e otimização de queries</li><li>Deploy e manutenção em servidores Linux/VPS</li></ul></div></div>
+    <div class="tl"><div class="meta"><span>2022 — 2024</span></div><div>
+      <h3>Desenvolvedor Backend (Freelancer)</h3><p class="co">Autônomo</p>
+      <ul><li>Sistemas web completos com Django para clientes de vários segmentos</li><li>APIs de integração com serviços externos e automação de processos</li></ul></div></div>
+    <div class="tl"><div class="meta"><span>2023 — 2024</span></div><div>
+      <h3>Estagiário de TI</h3><p class="co">Portal GP1 · Teresina, PI</p>
+      <ul><li>Suporte técnico, diagnóstico de hardware, software e rede</li><li>Configuração de switches, roteadores, impressoras e câmeras IP</li></ul></div></div>
+  </div>
+</div></section>
 
-  <!-- SOBRE -->
-  <section class="section sobre" id="sobre">
-    <div class="container">
-      <div class="section-grid">
-        <div class="section-left">
-          <p class="eyebrow">01 — Sobre mim</p>
-          <h2 class="section-title">Construo backends que<br><em>ficam de pé</em></h2>
-        </div>
-        <div class="section-right">
-          <p class="sobre-text">
-            Sou desenvolvedor Backend com foco em <strong>Python, Django e Django REST Framework</strong>, especializado em sistemas web escaláveis que já estão em produção.
-          </p>
-          <p class="sobre-text">
-            Tenho experiência na criação de <strong>APIs RESTful com autenticação JWT</strong>, integração com bancos de dados relacionais (PostgreSQL e MySQL), e deploy em ambientes Linux/VPS. Aplico boas práticas como Clean Code, SOLID e Clean Architecture no dia a dia.
-          </p>
-          <p class="sobre-text">
-            Formado em Redes de Computadores pela Estácio e cursando Engenharia de Software pela UNICIVE. Essa base de infraestrutura me dá uma visão mais completa do sistema — do banco de dados ao servidor.
-          </p>
-          <div class="sobre-badges">
-            <span class="badge">Clean Code</span>
-            <span class="badge">SOLID</span>
-            <span class="badge">Clean Architecture</span>
-            <span class="badge">REST</span>
-            <span class="badge">JWT</span>
-            <!-- <span class="badge">Docker</span> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section" id="projetos"><div class="container">
+  <p class="eyebrow">04 — Projetos</p><h2 class="title">Sistemas em <span class="grad">produção</span></h2>
+  <div class="grid g3">
+    <article class="card feat"><small>Flutter · Saúde</small><h3>App do Beneficiário</h3><p>Carteirinha digital, guias, extratos, cobranças, IR, reembolso, biometria facial e login gov.br, com troca de convênio em tempo de execução e múltiplos flavors.</p><div class="chips"><b>Flutter</b><b>Dart</b><b>OAuth/Keycloak</b><b>Firebase</b></div></article>
+    <article class="card"><small>API · Privado</small><h3>API de Gestão de Saúde</h3><p>NestJS com JWT, filas RabbitMQ, jobs agendados, PDFs, S3, push, e-mail e WhatsApp.</p><div class="chips"><b>NestJS</b><b>PostgreSQL</b><b>RabbitMQ</b></div></article>
+    <article class="card"><small>ERP · Privado</small><h3>ERP Odoo 19</h3><p>Contratos, mensalidades, boletos, negociações e integração bancária em addons próprios.</p><div class="chips"><b>Odoo</b><b>Python</b><b>QWeb</b></div></article>
+    <article class="card"><small>Órgão público</small><h3>Portal Juventude — SEMJUV</h3><p>Sistema institucional da Prefeitura de Teresina, em arquitetura Django escalável.</p><div class="chips"><b>Django</b><b>MySQL</b></div><a class="link" href="https://juventude.teresina.pi.gov.br/" target="_blank">↗ Ver projeto</a></article>
+    <article class="card"><small>Plataforma</small><h3>MaltaUP — Cursos</h3><p>Cursos pagos e gratuitos com checkout via Efí Bank, autenticação e gestão de alunos.</p><div class="chips"><b>Django</b><b>DRF</b><b>Efí Bank</b></div><a class="link" href="https://www.maltaup.com.br/" target="_blank">↗ Ver projeto</a></article>
+    <article class="card"><small>Sistema web</small><h3>SGT — Gestão de Sinistros</h3><p>Sinistros de trânsito com validação por QR Code e geração dinâmica de PDFs.</p><div class="chips"><b>Django</b><b>QR Code</b><b>PDF</b></div><a class="link" href="https://agtplma.site/login/?next=/" target="_blank">↗ Ver projeto</a></article>
+  </div>
+</div></section>
 
-  <!-- STACK -->
-  <section class="section stack-section" id="stack">
-    <div class="container">
-      <p class="eyebrow centered">02 — Stack</p>
-      <h2 class="section-title centered">Tecnologias que uso<br>no dia a dia</h2>
+<section class="section alt"><div class="container">
+  <p class="eyebrow">05 — Formação</p><h2 class="title">Educação & <span class="grad">cursos</span></h2>
+  <div class="grid g2">
+    <div class="card"><h4>Graduação</h4><p><b class="st">Em andamento</b> Engenharia de Software · UNICIVE</p><p><b class="st done">Concluído</b> Redes de Computadores · Estácio de Sá</p></div>
+    <div class="card"><h4>Certificações</h4><p>Python 3 do Básico ao Avançado · Cod3r</p><p>Dart: assincronismo, OOP, coleções e APIs · Alura</p><p>Administração e Segurança de Redes · Estácio</p></div>
+  </div>
+</div></section>
 
-      <div class="stack-grid">
-        <div class="stack-group">
-          <h4 class="stack-group-title">Backend</h4>
-          <div class="stack-items">
-            <div class="stack-item primary">
-              <i class="devicon-python-plain colored stack-icon"></i>
-              <span class="stack-name">Python</span>
-            </div>
-            <div class="stack-item primary">
-              <i class="devicon-django-plain colored stack-icon"></i>
-              <span class="stack-name">Django</span>
-            </div>
-            <div class="stack-item primary">
-              <i class="devicon-djangorest-plain colored stack-icon"></i>
-              <span class="stack-name">DRF</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-flask-original stack-icon"></i>
-              <span class="stack-name">Flask</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-jsonwebtokens-plain colored stack-icon"></i>
-              <span class="stack-name">JWT</span>
-            </div>
-          </div>
-        </div>
+<section class="section" id="contato"><div class="container center">
+  <p class="eyebrow">06 — Contato</p><h2 class="title">Vamos construir <span class="grad">algo juntos?</span></h2>
+  <div class="grid g3">
+    <a class="card" href="mailto:alissonsts910@gmail.com"><h4>Email</h4><p>alissonsts910@gmail.com</p></a>
+    <a class="card" href="https://www.linkedin.com/in/alisson-alencar99/" target="_blank"><h4>LinkedIn</h4><p>alisson-alencar99</p></a>
+    <a class="card" href="https://github.com/alisson-gustavo" target="_blank"><h4>GitHub</h4><p>github.com/alisson-gustavo</p></a>
+  </div>
+</div></section>
 
-        <div class="stack-group">
-          <h4 class="stack-group-title">Banco de Dados</h4>
-          <div class="stack-items">
-            <div class="stack-item primary">
-              <i class="devicon-postgresql-plain colored stack-icon"></i>
-              <span class="stack-name">PostgreSQL</span>
-            </div>
-            <div class="stack-item primary">
-              <i class="devicon-mysql-original colored stack-icon"></i>
-              <span class="stack-name">MySQL</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-sqlite-plain colored stack-icon"></i>
-              <span class="stack-name">SQLite</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-microsoftsqlserver-plain colored stack-icon"></i>
-              <span class="stack-name">SQL Server</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h4 class="stack-group-title">DevOps & Infra</h4>
-          <div class="stack-items">
-            <!-- <div class="stack-item primary">
-              <i class="devicon-docker-plain colored stack-icon"></i>
-              <span class="stack-name">Docker</span>
-            </div> -->
-            <div class="stack-item primary">
-              <i class="devicon-git-plain colored stack-icon"></i>
-              <span class="stack-name">Git</span>
-            </div>
-            <div class="stack-item primary">
-              <i class="devicon-github-original stack-icon"></i>
-              <span class="stack-name">GitHub</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-linux-plain colored stack-icon"></i>
-              <span class="stack-name">Linux</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-ubuntu-plain colored stack-icon"></i>
-              <span class="stack-name">Ubuntu / VPS</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h4 class="stack-group-title">Frontend & Mobile</h4>
-          <div class="stack-items">
-            <div class="stack-item">
-              <i class="devicon-react-original colored stack-icon"></i>
-              <span class="stack-name">React</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-flutter-plain colored stack-icon"></i>
-              <span class="stack-name">Flutter</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-dart-plain colored stack-icon"></i>
-              <span class="stack-name">Dart</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-javascript-plain colored stack-icon"></i>
-              <span class="stack-name">JavaScript</span>
-            </div>
-            <div class="stack-item">
-              <i class="devicon-html5-plain colored stack-icon"></i>
-              <span class="stack-name">HTML / CSS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIÊNCIA -->
-  <section class="section experiencia-section" id="experiencia">
-    <div class="container">
-      <p class="eyebrow">03 — Experiência</p>
-      <h2 class="section-title">Trajetória profissional</h2>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-period">Abr/2024 — Atual</span>
-            <span class="timeline-badge current">Atual</span>
-          </div>
-          <div class="timeline-content">
-            <h3 class="timeline-role">Desenvolvedor Full Stack</h3>
-            <p class="timeline-company">Faculdade Malta · Teresina, PI</p>
-            <ul class="timeline-list">
-              <li>Desenvolvimento e manutenção de APIs RESTful com Django e DRF para integração entre sistemas internos</li>
-              <li>Arquitetura e modelagem de banco de dados relacional com MySQL e SQLite, incluindo otimização de queries</li>
-              <li>Deploy e manutenção de aplicações em servidores Linux/VPS garantindo disponibilidade institucional</li>
-              <li>Implementação de melhorias contínuas e suporte técnico em sistemas web ativos em produção</li>
-              <li>Versionamento e colaboração com Git/GitHub, incluindo code review e fluxo de branches</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-period">2022 — 2024</span>
-          </div>
-          <div class="timeline-content">
-            <h3 class="timeline-role">Desenvolvedor Backend — Freelancer</h3>
-            <p class="timeline-company">Autônomo</p>
-            <ul class="timeline-list">
-              <li>Entrega de sistemas web completos com Django para clientes de diferentes segmentos</li>
-              <li>Desenvolvimento de APIs para integração com serviços externos e automação de processos</li>
-              <li>Implementação de soluções com foco em desempenho, segurança e facilidade de manutenção</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-period">2023 — 2024</span>
-          </div>
-          <div class="timeline-content">
-            <h3 class="timeline-role">Estagiário de TI</h3>
-            <p class="timeline-company">Portal GP1 · Teresina, PI</p>
-            <ul class="timeline-list">
-              <li>Suporte técnico a usuários internos, garantindo disponibilidade dos recursos de TI</li>
-              <li>Diagnóstico e resolução de problemas em hardware, software e rede</li>
-              <li>Configuração de ativos de rede: switches, roteadores, impressoras e câmeras IP</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJETOS -->
-  <section class="section projetos-section" id="projetos">
-    <div class="container">
-      <p class="eyebrow centered">04 — Projetos</p>
-      <h2 class="section-title centered">Sistemas em produção</h2>
-
-      <div class="projects-grid">
-
-        <div class="project-card featured">
-          <div class="project-header">
-            <div class="project-tag">Órgão Público · Em produção</div>
-            <div class="project-links">
-              <a href="https://juventude.teresina.pi.gov.br/" target="_blank" class="project-link">↗ Ver projeto</a>
-            </div>
-          </div>
-          <h3 class="project-title">Portal Juventude — SEMJUV</h3>
-          <p class="project-desc">Sistema institucional em produção para a Secretaria Municipal da Juventude da Prefeitura de Teresina-PI. Arquitetura Django escalável, preparada para expansões futuras.</p>
-          <div class="project-tech">
-            <span>Django</span><span>Python</span><span>JavaScript</span><span>MySQL</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-tag">Sistema web · Em produção</div>
-            <div class="project-links">
-              <a href="https://faculdademalta.edu.br/" target="_blank" class="project-link">↗ Ver projeto</a>
-            </div>
-          </div>
-          <h3 class="project-title">Faculdade Malta — Site Institucional</h3>
-          <p class="project-desc">Portal institucional com CRM integrado e painel administrativo para gestão interna. Sistema em produção com uso diário pela equipe da instituição.</p>
-          <div class="project-tech">
-            <span>Django</span><span>Python</span><span>MySQL</span><span>SQLite</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-tag">Plataforma · Em produção</div>
-            <div class="project-links">
-              <a href="https://www.maltaup.com.br/" target="_blank" class="project-link">↗ Ver projeto</a>
-            </div>
-          </div>
-          <h3 class="project-title">MaltaUP — Plataforma de Cursos</h3>
-          <p class="project-desc">Plataforma de cursos pagos e gratuitos com integração de pagamento via Efí Bank. Fluxo completo de checkout, autenticação e gestão de alunos.</p>
-          <div class="project-tech">
-            <span>Django</span><span>DRF</span><span>Efí Bank API</span><span>MySQL</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-tag">Sistema web · Em produção</div>
-            <div class="project-links">
-              <a href="https://agtplma.site/login/?next=/" target="_blank" class="project-link">↗ Ver projeto</a>
-            </div>
-          </div>
-          <h3 class="project-title">SGT — Gestão de Sinistros</h3>
-          <p class="project-desc">Sistema completo para gestão de sinistros de trânsito com validação de documentos via QR Code, geração dinâmica de PDFs e autenticação integrada.</p>
-          <div class="project-tech">
-            <span>Django</span><span>QR Code</span><span>PDF</span><span>MySQL</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-tag">API · Privado</div>
-          </div>
-          <h3 class="project-title">API — Faculdade Malta</h3>
-          <p class="project-desc">API de gerenciamento e integração de Leads de alunos que se inscrevem no sistema da faculdade. Integração entre sistemas internos via DRF.</p>
-          <div class="project-tech">
-            <span>Django REST Framework</span><span>Python</span><span>MySQL</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-tag">Estudo · React</div>
-            <div class="project-links">
-              <a href="https://spacex-clone-snowy.vercel.app/" target="_blank" class="project-link">↗ Ver projeto</a>
-            </div>
-          </div>
-          <h3 class="project-title">SpaceX Clone</h3>
-          <p class="project-desc">Recriação fiel do site da SpaceX com foco em componentização e boas práticas React. Demonstra capacidade de trabalhar com frontend moderno.</p>
-          <div class="project-tech">
-            <span>React</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMAÇÃO -->
-  <section class="section formacao-section">
-    <div class="container">
-      <p class="eyebrow">05 — Formação</p>
-      <h2 class="section-title">Educação &amp; Certificações</h2>
-
-      <div class="formacao-grid">
-        <div class="formacao-group">
-          <h4 class="formacao-group-title">Graduação</h4>
-          <div class="formacao-item">
-            <span class="formacao-status ongoing">Em andamento</span>
-            <p class="formacao-course">Bacharelado em Engenharia de Software</p>
-            <p class="formacao-inst">UNICIVE – Centro Universitário</p>
-          </div>
-          <div class="formacao-item">
-            <span class="formacao-status done">Concluído</span>
-            <p class="formacao-course">Tecnólogo em Redes de Computadores</p>
-            <p class="formacao-inst">Estácio de Sá</p>
-          </div>
-        </div>
-
-        <div class="formacao-group">
-          <h4 class="formacao-group-title">Certificações</h4>
-          <div class="formacao-item">
-            <p class="formacao-course">Python 3 do Básico ao Avançado</p>
-            <p class="formacao-inst">Cod3r</p>
-          </div>
-          <div class="formacao-item">
-            <p class="formacao-course">Dart: assincronismo, OOP, coleções e APIs</p>
-            <p class="formacao-inst">Alura · 4 certificados</p>
-          </div>
-          <div class="formacao-item">
-            <p class="formacao-course">Administração e Segurança de Redes</p>
-            <p class="formacao-inst">Estácio de Sá</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="section contato-section" id="contato">
-    <div class="container">
-      <p class="eyebrow centered">06 — Contato</p>
-      <h2 class="section-title centered">Vamos construir<br>algo juntos?</h2>
-      <p class="contato-sub">Estou disponível para novos projetos, posições remotas e colaborações.</p>
-
-      <div class="contato-grid">
-        <a href="mailto:alissonsts910@gmail.com" class="contato-card">
-          <span class="contato-icon">✉️</span>
-          <span class="contato-label">Email</span>
-          <span class="contato-value">alissonsts910@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/alisson-alencar99/" target="_blank" class="contato-card">
-          <i class="devicon-linkedin-plain"></i>
-          <span class="contato-label">LinkedIn</span>
-          <span class="contato-value">alisson-alencar99</span>
-        </a>
-        <a href="https://github.com/alisu99/" target="_blank" class="contato-card">
-          <i class="devicon-github-plain"></i>
-          <span class="contato-label">GitHub</span>
-          <span class="contato-value">github.com/alisu99</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <span class="nav-logo">AG<span class="dot">.</span></span>
-        <p>© 2025 Alisson Gustavo Alencar Santos. Todos os direitos reservados.</p>
-        <a href="assets/pdf/Curriculo_Alisson_Gustavo_Backend.pdf" target="_blank" class="btn-ghost small">Currículo</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/assets/js/script.js"></script>
+<footer><div class="container foot"><a href="#home" class="logo">AG<span>.</span></a><p>© 2026 Alisson Gustavo Alencar Santos</p><em>"Primeiro faça funcionar, depois faça direito, depois faça rápido."</em></div></footer>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
